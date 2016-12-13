@@ -1,0 +1,10 @@
+{
+  "name": "Example Backend",
+  "description": "Example Backend to save measurments",
+  "keywords": [
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/olsio/be",
+  "website": "https://github.com/olsio/be",
+  "repository": "https://github.com/olsio/be"
+}
