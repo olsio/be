@@ -15,6 +15,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/itsjamie/gin-cors"
 )
 
 const (
@@ -38,6 +39,19 @@ func main() {
 	port := getPort()
 
 	router := gin.New()
+
+	corsConfig := cors.Config{
+		Origins:         "*",
+		Methods:         "GET, PUT, POST, DELETE",
+		RequestHeaders:  "Origin, Authorization, Content-Type",
+		ExposedHeaders:  "",
+		MaxAge:          50 * time.Second,
+		Credentials:     true,
+		ValidateHeaders: false,
+	}
+
+	router.Use(cors.Middleware(corsConfig))
+
 	router.Use(gin.Logger())
 	router.LoadHTMLGlob("templates/*.tmpl.html")
 	router.Static("/static", "static")

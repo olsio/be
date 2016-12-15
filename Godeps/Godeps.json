@@ -31,6 +31,11 @@
 			"Rev": "064e2069ce9c359c118179501254f67d7d37ba24"
 		},
 		{
+			"ImportPath": "github.com/itsjamie/gin-cors",
+			"Comment": "1.0.0",
+			"Rev": "97b4a9da79331dfa2b6d35f4cdd1e50f5148859c"
+		},
+		{
 			"ImportPath": "github.com/manucorporat/sse",
 			"Rev": "ee05b128a739a0fb76c7ebd3ae4810c1de808d6d"
 		},
